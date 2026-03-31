@@ -1,0 +1,5 @@
+Linguagem de Programação: C/C++
+Descrição:
+Suponha que você está implementando um programa para simular um jogo de roleta com várias rodadas. O jogo funciona da seguinte forma: é selecionado um número aleatório que indica o número de casas a bolinha irá saltar. Dependendo do valor sorteado e do tamanho da roleta, a bolinha pode dar mais de uma volta na roleta. Para tornar o sorteio mais interessante, quando a bolinha parar, a roleta poderá ser rodada novamente e a bolinha saltará uma nova quantidade de casas, começando daquela em que ela tinha parado. Por exemplo, se ela tinha parado na casa 10 e o número aleatório foi 5, a bolinha irá parar na casa 15.
+
+O programa recebe como entrada inicialmente o tamanho da roleta (quantidade de casas disponíveis) e o número de vezes que a roleta será girada. Como a função rand pode ser implementada de formas diferentes dependendo da versão do compilador e do sistema operacional, serão digitados uma sequência de inteiros representando os valores aleatórios. Deve ser printado na tela como saída o índice da casa em que a bolinha irá parar.

@@ -1,0 +1,12 @@
+Linguagem de Programação: C/C++
+Descrição:
+Faça um programa que comece lendo um número inteiro.
+Como cada char ocupa 1 byte, um inteiro é equivalente a 4 chars.
+Vamos verificar quais números existem nos 4 bytes quando olhamos para eles separadamente?
+Reinterprete o endereço do inteiro como um array de chars, como indicado abaixo:
+
+--------------
+char *c = (char *) &valor;
+--------------
+
+Use um for para iterar sobre os 4 chars mostrando seus valores inteiros na tela. Use "%d" no printf para mostrar o valor dos caracteres como números.

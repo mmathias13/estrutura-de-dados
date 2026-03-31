@@ -1,0 +1,8 @@
+Linguagem de Programação: C/C++
+Descrição:
+Crie uma estrutura NotasAluno contendo nome (string com até 32 caracteres), nota_t1 (float), nota_t2 (float), nota_prova (float) e percentual_falta (float). Na main, crie uma variável do tipo NotasAluno e leia os dados da estrutura usando scanf. Escreva as seguintes funções:
+
+- nota_média: recebe uma variável do tipo NotasAluno e retorna a nota média assumindo que os trabalhos valem 25% da nota, cada, e a prova vale 50% da nota.
+- aprovado: recebe uma variável do tipo NotasAluno e retorna 1 se o aluno foi aprovado e 0, caso contrário. Um aluno é aprovado se a nota média é maior ou igual a 7 e o percentual de falta for menor ou igual a 0.25. Usa a função nota_média para calcular a nota média.
+
+Mostre na tela se o aluno foi aprovado ou reprovado.

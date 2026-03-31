@@ -1,0 +1,7 @@
+Linguagem de Programação: C/C++
+Descrição:
+Faça um programa que leia um número inteiro n e aloque espaço um array de n inteiros usando malloc/calloc. Em seguida, leia os valores dos n inteiros e armazene-os no array. Mostre na tela o valor da média e do desvio padrão com 2 casas depois da vírgula. Por fim, desaloque o array usando free. Use o valgrind para verificar que todo o espaço alocado foi desalocado.
+
+A média é obtida somando os valores e dividindo pelo número de elementos: média = (x1 + x2 + ... + xn) / n .
+
+O desvio padrão é a raiz quadrada da variância: sqrt( ( (x1 - média)^2 + ... + (xn - média)^2  ) / (n - 1) ) .

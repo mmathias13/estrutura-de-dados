@@ -1,0 +1,9 @@
+Linguagem de Programação: C/C++
+Descrição:
+Você foi designado para criar um sistema de análise de dados para um festival de cinema. O sistema recebe como entrada uma lista de filmes e as notas que os jurados atribuíram a cada um; como saída, ele deve imprimir os nomes dos filmes com nota acima da média na mesma ordem em que eles foram usados como entrada.  
+
+Deve ser criada uma estrutura Filme contendo o nome do filme e um ponteiro para um vetor de floats para armazenar as notas. Você deve alocar dinamicamente o vetor de filmes e o vetor de notas de cada filme.  Não é permitido o uso de vetores de tamanho fixo (estáticos) para o armazenamento dos filmes ou das notas.
+
+A primeira linha da entrada será um inteiro N representando o número de filmes. Para cada filme, será digitado o nome do filme (uma única palavra com até 32 caracteres, sem espaços) e um inteiro M representando a quantidade de notas. A seguir, serão digitados M números de ponto flutuante representando as notas.
+
+Lembre-se de desalocar os vetores ao final. Use o valgrind para verificar que toda memória alocada foi desalocada.

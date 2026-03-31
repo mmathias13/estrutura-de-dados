@@ -1,0 +1,23 @@
+Descrição:
+Considere uma função que precisa retornar vários valores, por exemplo, uma função que calcula as duas raízes de uma equação do segundo grau. Uma forma de implementar tal função é passar os endereços das variáveis de saída como argumentos e dentro da função atualizar o conteúdo dos endereços:
+
+--------------
+void raizes(float a, float b, float c, float *x1, float *x2)
+{
+// (...)
+*x1 = // primeira raiz
+*x2 = // segunda raiz
+}
+--------------
+
+Na main, devem ser criadas variáveis para armazenar os valores de saída e os seus endereços devem ser usados ao invocar a função:
+
+--------------
+float a, b, c, x1, x2;
+// (...)
+raizes(a, b, c, &x1, &x2);
+--------------
+
+Usando este exemplo como inspiração, implemente uma função que receba como entrada um array de inteiros e retorne o maior e o menor valor deste array.
+A entrada do programa é um inteiro n representando o tamanho do array e uma sequência de n inteiros representando seus elementos.
+Na saída devem ser exibidos o menor valor e o maior valor. Use a função para obtê-los.
