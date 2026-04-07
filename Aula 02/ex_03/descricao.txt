@@ -1,0 +1,8 @@
+Nesta atividade, você deve implementar as seguintes funções:
+
+
+vector_size: Esta função é bem simples e deve apenas retornar o número de elementos já inseridos no vetor.
+
+vector_get: Verifique se o índice é válido e, se sim, retorne elemento da respectiva posição. Caso contrário, mostre uma mensagem de erro informativa na tela e encerre o programa usando a função exit. Importante: Um índice é válido se ele não for negativo e for menor que o tamanho do vector.
+
+vector_set: Ela é similar à função anterior, mas deve atribuir um valor à i-ésima posição ao invés de obter o valor.

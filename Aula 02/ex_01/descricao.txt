@@ -1,0 +1,7 @@
+Descrição:
+Considerando o arquivo vector.h anexo à questão, implemente as funções de construção e destruição de variáveis do tipo Vector.
+
+
+Função vector_construct: Use a função calloc (explicacao) para alocar espaço para um Vector. Em seguida, inicialize o tamanho alocado com um valor padrão (10, por exemplo) e o tamanho como zero. Por fim, use a função calloc novamente para alocar espaço para o array de dados do tipo data_type. Deve ser reservado espaço para tantos itens quanto o valor atribuído ao tamanho alocado.
+
+Função vector_destroy: Use a função free (explicacao) para liberar o espaço alocado para os itens do vetor e para liberar v.
