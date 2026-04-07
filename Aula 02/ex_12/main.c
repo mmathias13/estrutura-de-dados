@@ -23,7 +23,7 @@ int main()
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &val);
-        printf("%d\n", vector_find(v, val));
+        printf("%d\n", vector_binary_search(v, val));
     }
 
     vector_destroy(v);

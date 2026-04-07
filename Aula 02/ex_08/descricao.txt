@@ -1,0 +1,3 @@
+Implemente a função vector_remove para remover o i-ésimo elemento de um vector. O valor removido deve ser retornado pela função de forma que se for um ponteiro, o usuário possa desalocá-lo. Para implementar a função, use um loop for para deslocar todos os elementos à direita de i uma posição para a esquerda de forma a "tapar o buraco" criado com a remoção do elemento. A função deve atualizar o tamanho do vetor ao final.
+
+O programa main.c irá ler dois números inteiros m e n. Em seguida, m números inteiros serão lidos e adicionados no vector usando a função vector_push_back. Por fim, n índices serão lidos e devem ser removidos.  O vector resultante ao final do processo deve ser exibido na tela.

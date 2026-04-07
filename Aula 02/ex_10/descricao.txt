@@ -1,0 +1,3 @@
+A função vector_pop_front deve remover o primeiro elemento e a função vector_pop_back deve remover o último elemento. Use a função vector_remove para implementá-las.
+
+O programa main.c irá ler três números inteiros m, n e o. Em seguida, m números inteiros serão lidos e adicionados no vector usando a função vector_push_back. Por fim, deverão ser realizados "n" pop_fronts e "o" pop_backs.  O vector resultante deve ser exibido na tela.

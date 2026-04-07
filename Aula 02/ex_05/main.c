@@ -6,13 +6,13 @@
 
 int main()
 {
-    int m, n, val;
+    int m, val;
 
     Vector *v;
 
     v = vector_construct();
 
-    scanf("%d %d", &m, &n);
+    scanf("%d", &m);
 
     for (int i = 0; i < m; i++)
     {
@@ -20,11 +20,10 @@ int main()
         vector_push_back(v, val);
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &val);
-        printf("%d\n", vector_find(v, val));
-    }
+    printf("%d\n", vector_max(v));
+    printf("%d\n", vector_min(v));
+    printf("%d\n", vector_argmax(v));
+    printf("%d\n", vector_argmin(v));
 
     vector_destroy(v);
 

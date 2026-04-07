@@ -60,6 +60,49 @@ int vector_find(Vector *v, data_type val){
     return -1;
 }
 
+// Retorna o maior elemento do vector (assumindo que podemos comparar elementos usando o operador "<")
+data_type vector_max(Vector *v){
+    int maiorElemento = 0;
+
+    for (int i = 0; i < v->size; i++){
+        if (i == 0){
+            maiorElemento = v->data[i];
+        }
+        if (v->data[i] > maiorElemento){
+            maiorElemento = v->data[i];
+        }
+    }
+    return maiorElemento;
+}
+
+// Retorna o menor elemento do vector (assumindo que podemos comparar elementos usando o operador "<")
+data_type vector_min(Vector *v){
+        int menorElemento = 0;
+
+    for (int i = 0; i < v->size; i++){
+        if (i == 0){
+            menorElemento = v->data[i];
+        }
+        if (v->data[i] < menorElemento){
+            menorElemento = v->data[i];
+        }
+    }
+    return menorElemento;
+}
+
+// Retorna o Ã­ndice do maior elemento do vector (assumindo que podemos comparar elementos usando o operador "<")
+int vector_argmax(Vector *v){
+    int maiorElemento = vector_max(v);
+
+    return vector_find(v, maiorElemento);
+}
+
+// Retorna o Ã­ndice do menor elemento do vector (assumindo que podemos comparar elementos usando o operador "<")
+int vector_argmin(Vector *v){
+    int menorElemento = vector_min(v);
+
+    return vector_find(v, menorElemento);
+}
 
 void vector_destroy(Vector *v) {
     if (v == NULL) return;

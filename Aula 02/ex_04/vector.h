@@ -19,6 +19,8 @@ data_type vector_get(Vector *v, int i);
 void vector_set(Vector *v, int i, data_type val);
 int vector_size(Vector *v);
 
+int vector_find(Vector *v, data_type val);
+
 void vector_destroy(Vector *v);
 
 #endif

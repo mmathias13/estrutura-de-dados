@@ -1,0 +1,3 @@
+A função vector_swap deve receber como parâmetros um ponteiro para o vetor e dois índices i e j e trocar os elementos do vetor nas posições i e j.
+
+O programa main.c irá ler dois números inteiros m e n. Em seguida, "m" números inteiros serão lidos e adicionados no vetor usando a função vector_push_back. Após isso, serão realizadas "n" trocas de elementos do vetor, onde os índices dos elementos a serem trocados são lidos do input. Finalmente, o vetor resultante será exibido na tela.

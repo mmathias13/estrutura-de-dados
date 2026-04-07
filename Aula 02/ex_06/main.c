@@ -6,7 +6,7 @@
 
 int main()
 {
-    int m, n, val;
+    int i, m, n, idx_1, idx_2, val;
 
     Vector *v;
 
@@ -14,17 +14,20 @@ int main()
 
     scanf("%d %d", &m, &n);
 
-    for (int i = 0; i < m; i++)
+    for (i = 0; i < m; i++)
     {
         scanf("%d", &val);
         vector_push_back(v, val);
     }
 
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
-        scanf("%d", &val);
-        printf("%d\n", vector_find(v, val));
+        scanf("%d %d", &idx_1, &idx_2);
+        vector_swap(v, idx_1, idx_2);
     }
+
+    for (i = 0; i < vector_size(v); i++)
+        printf("%d\n", vector_get(v, i));
 
     vector_destroy(v);
 

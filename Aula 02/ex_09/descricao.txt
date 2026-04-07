@@ -1,0 +1,3 @@
+A função vector_reverse deve inverter a ordem dos elementos do vetor in-place (sem criar um novo vetor). Use a função vector_swap na implementação.
+
+O programa main.c irá ler um número inteiro m. Em seguida, m números inteiros serão lidos e adicionados no vetor usando a função vector_push_back. Depois, o vetor será invertido usando a função vector_reverse. Por fim, os elementos do vetor invertido serão exibidos na tela.

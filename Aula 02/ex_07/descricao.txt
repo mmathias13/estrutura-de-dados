@@ -1,0 +1,3 @@
+A função vector_insert deve receber um ponteiro para o vetor, um índice i e um valor val como parâmetros e inserir o valor val na i-ésima posição do vetor. Para "abrir espaço" para o novo item, todos os elementos à direita de i devem ser deslocados de uma posição para a direita. Se o vetor já estiver cheio, ele deve ser realocado automaticamente e a função deve atualizar o tamanho do vetor.
+
+O programa main.c irá ler um número inteiros m. Em seguida, serão lidos m pares de números inteiros, sendo que cada par contém um índice e um valor. A função vector_insert deve ser utilizada para inserir o valor no índice dado. O vector resultante deve ser exibido na tela.

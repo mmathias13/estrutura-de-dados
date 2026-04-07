@@ -1,0 +1,5 @@
+A função vector_sort deve ordenar o vetor em ordem crescente usando o algoritmo de ordenação Bubble Sort. Para implementar o Bubble Sort, devemos percorrer o vetor comparando cada elemento com o próximo e trocando-os de posição quando estiverem com a ordem errada (o primeiro maior que o segundo). O processo deve ser repetido até que não ocorram mais trocas durante uma passagem pelo vetor. Isso pode ser implementado usando um loop externo que controla o número de passagens pelo vetor e um loop interno que percorre o vetor comparando elementos adjacentes. Se durante a comparação um elemento estiver na ordem errada, eles devem ser trocados de posição usando a função vector_swap.
+
+Dica para melhoria de performance: Quando o loop interno terminar de percorrer o vetor, deve-se verificar se alguma troca ocorreu. Se não, isso significa que o vetor está ordenado e o loop externo pode ser interrompido.
+
+O programa main.c irá ler um número inteiros m. Em seguida, m números inteiros serão lidos e adicionados no vector usando a função vector_push_back. Use a função vector_sort para ordenar o vetor e mostre-o na tela.
