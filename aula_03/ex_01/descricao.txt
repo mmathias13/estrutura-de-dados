@@ -1,0 +1,1 @@
+Crie o arquivo product.c conforme especificação do roteiro de laboratório (https://github.com/filipemtz/ED-Labs/blob/main/02-03-generic-and-opaque-data-structures.md). São dados abaixo os arquivos product.h e o programa main.c abaixo. Os nomes das funções devem seguir as instruções do roteiro para o programa main.c funcionar.
