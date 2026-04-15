@@ -117,6 +117,23 @@ data_type vector_remove(Vector *v, int i){
     return item_removido;
 }
 
+void vector_insert(Vector *v, int i, data_type val){
+    if (v->allocated <= v->size){
+        int new_allocated = v->allocated * 2;
+        data_type *new_data = (data_type *)realloc(v->data, new_allocated * sizeof(data_type));
+
+        v->allocated = new_allocated;
+        v->data = new_data;
+    }
+
+    for (int j = v->size; j > i; j--){
+        v->data[j] = v->data[j - 1];
+    }
+
+    v->data[i] = val;
+    v->size++;
+}
+
 // Troca os elementos das posiÃ§Ãµes i e j (i vira j e j vira i)
 void vector_swap(Vector *v, int i, int j){
     int aux;

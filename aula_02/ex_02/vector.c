@@ -15,17 +15,14 @@ Vector *vector_construct(){
 }
 
 void vector_push_back(Vector *v, data_type val){
-
     if (v->size >= v->allocated){
-        
-        int new_allocated = v->allocated * 2;
+        int new_allocated = 2 * v->allocated;
 
         data_type *new_data = (data_type *)realloc(v->data, new_allocated * sizeof(data_type));
 
         v->data = new_data;
         v->allocated = new_allocated;
     }
-
     v->data[v->size] = val;
     v->size++;
 }

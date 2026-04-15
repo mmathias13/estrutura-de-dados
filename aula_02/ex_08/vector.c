@@ -106,12 +106,11 @@ int vector_argmin(Vector *v){
 
 // Remove o i-Ã©simo elemento do vetor.
 data_type vector_remove(Vector *v, int i){
+    
     data_type item_removido = v->data[i];
-
-    for(int j = i; j < v->size - 1; j++){
+    for (int j = i; j < v->size - 1; j++){
         v->data[j] = v->data[j + 1];
     }
-
     v->size--;
 
     return item_removido;

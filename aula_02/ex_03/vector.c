@@ -1,31 +1,56 @@
-
+#include "vector.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-#include "vector.h"
+Vector *vector_construct(){
 
-int main()
-{
-    int n, value;
-    Vector *v;
+    Vector *v = (Vector *)calloc(1, sizeof(Vector));
+    v->size = 0;
+    v->allocated = 10;
+    v->data = (data_type *)calloc(v->allocated, sizeof(data_type));
 
-    v = vector_construct();
+    return v;
+    
+}
 
-    scanf("%d", &n);
+void vector_push_back(Vector *v, data_type val){
+    if (v->size >= v->allocated){
+        int new_allocated = 2 * v->allocated;
 
-    for (int i = 1; i <= n; i++)
-    {
-        scanf("%d", &value);
-        vector_push_back(v, value);
+        data_type *new_data = (data_type *)realloc(v->data, new_allocated * sizeof(data_type));
+
+        v->data = new_data;
+        v->allocated = new_allocated;
     }
+    v->data[v->size] = val;
+    v->size++;
+}
 
-    for (int i = 0; i < v->size; i++)
-        vector_set(v, i, vector_get(v, i) * 2);
+data_type vector_get(Vector *v, int i){
+    if (i > v->size || i < 0){
+        exit(EXIT_SUCCESS);
+    } else {
+        return v->data[i];
+    }
+}
+void vector_set(Vector *v, int i, data_type val){
+    if (i > v->size || i < 0){
+        exit(EXIT_SUCCESS);
+    } else {
+        v->data[i] = val;
+    }
+}
+int vector_size(Vector *v){
+    return v->size;
+}
 
-    for (int i = 0; i < vector_size(v); i++)
-        printf("%d\n", vector_get(v, i));
 
-    vector_destroy(v);
-
-    return 0;
+void vector_destroy(Vector *v){
+    if (!v){
+        for (int i = 0; i < v->size; i++){
+            free(v->data);
+        }
+        free(v);
+    }
 }

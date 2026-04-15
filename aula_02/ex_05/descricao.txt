@@ -1,0 +1,4 @@
+Descrição:
+Escreva funções vector_max, vector_min para retornar o maior e o menor elemento do vector, respectivamente. Em seguida, implemente as variações vector_argmax e vector_argmin que retornam o índice do maior elemento e o índice do menor elemento, respectivamente.
+
+Para testar as funções, é dado um programa em main.c que lê um número inteiro m e, em seguida, lê m números inteiros e os adiciona em um vector. Por fim, são exibidos na tela os valores máximo e mínimo e os respectivos índices (nesta ordem).
