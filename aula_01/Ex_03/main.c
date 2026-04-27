@@ -2,37 +2,34 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main(){
+int main(int argc, char const *argv[])
+{
+    int n, sum = 0;
+    float variance = 0;
 
-    int n = 0;
     scanf("%d", &n);
 
-    int *v = (int * )malloc(n * sizeof(int));
-
-    for(int i = 0; i < n; i++){
-        scanf("%d", &v[i]);
-    }
-
-    int soma = 0;
+    int *array = (int *)calloc(n, sizeof(int));
 
     for (int i = 0; i < n; i++){
-        soma += v[i];
+        scanf("%d", &array[i]);
     }
 
-    float media = (float)soma / n;
+    for (int i = 0; i < n; i++){
+        sum += array[i];
+    }
+
+    float media = (float) sum / n;
     printf("%.2f\n", media);
 
-    float variancia = 0;
-
     for (int i = 0; i < n; i++){
-        variancia += ((v[i] - media) * (v[i] - media));     
+        variance += pow((array[i] - media), 2);
     }
 
-    float dp = sqrt((variancia / (n - 1)));
+    float standardDevitation = sqrt((variance) / (n - 1));
+    printf("%.2f\n", standardDevitation);
 
-    printf("%.2f\n", dp);
-
-    free(v);
+    free(array);
 
     return 0;
 }
