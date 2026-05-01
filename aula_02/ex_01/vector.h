@@ -13,6 +13,5 @@ typedef struct
 
 Vector *vector_construct();
 void vector_destroy(Vector *v);
-void vector_push_back(Vector *v, data_type val);
 
 #endif
