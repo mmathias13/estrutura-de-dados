@@ -84,12 +84,19 @@ int vector_argmax(Vector *v){
     return vector_find(v, maiorElemento);
 }
 
-
 // Retorna o Ã­ndice do menor elemento do vector (assumindo que podemos comparar elementos usando o operador "<")
 int vector_argmin(Vector *v){
     int menorElemento = vector_min(v);
     return vector_find(v, menorElemento);
 }
+
+void vector_swap(Vector *v, int i, int j){
+    data_type val;
+    val = v->data[i];
+    v->data[i] = v->data[j];
+    v->data[j] = val;
+}
+
 void vector_destroy(Vector *v){
     if (v != NULL){
         if (v->data != NULL){
