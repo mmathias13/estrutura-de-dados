@@ -1,50 +1,38 @@
+#include "vector.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "vector.h"
+#include <string.h>
 
-Vector* vector_construct() {
-    Vector *v = (Vector*) calloc(1, sizeof(Vector));
-    if (v == NULL) return NULL;
+Vector *vector_construct(){
+    Vector *vector = (Vector*)calloc(1, sizeof(Vector));
+    vector->size = 0;
+    vector->allocated = 10;
+    vector->data = (data_type*)calloc(vector->allocated, sizeof(data_type));
 
-    v->allocated = 10; 
-    v->size = 0;      
-    v->data = (data_type*) calloc(v->allocated, sizeof(data_type));
-
-    if (v->data == NULL) {
-        free(v);
-        return NULL;
-    }
-    return v;
+    return vector;
 }
 
-void vector_push_back(Vector *v, data_type val) {
-    if (v->size == v->allocated) {
-        int new_allocated = v->allocated * 2;
-        data_type *temp = (data_type*) realloc(v->data, new_allocated * sizeof(data_type));
-        
-        if (temp == NULL) return; 
-
-        v->data = temp;
-        v->allocated = new_allocated;
+void vector_push_back(Vector *v, data_type val){
+    if (v->size >= v->allocated){
+        v->allocated *= 2;
+        v->data = (data_type *)realloc(v->data, v->allocated * sizeof(data_type));
     }
     v->data[v->size] = val;
     v->size++;
 }
 
 data_type vector_get(Vector *v, int i){
-    if (i >= 0 && i < v->size){
-        return v->data[i];
+    if (i < 0 || i >= v->size){
+        exit(EXIT_FAILURE); 
     } else {
-        //printf("Erro: Nao ha valor definido para o vetor na posicao %d.\n", i);
-        exit(EXIT_SUCCESS);
+        return v->data[i];
     }
 }
 void vector_set(Vector *v, int i, data_type val){
-    if (i >= 0 && i < v->size){
-        v->data[i] = val;
+    if (i < 0 || i >= v->size){
+        exit(EXIT_FAILURE);
     } else {
-        //printf("Erro: Nao ha valor definido para o vetor na posicao %d.\n", i);
-        exit(EXIT_SUCCESS);
+        v->data[i] = val;
     }
 }
 int vector_size(Vector *v){
@@ -93,21 +81,21 @@ data_type vector_min(Vector *v){
 // Retorna o Ã­ndice do maior elemento do vector (assumindo que podemos comparar elementos usando o operador "<")
 int vector_argmax(Vector *v){
     int maiorElemento = vector_max(v);
-
     return vector_find(v, maiorElemento);
 }
+
 
 // Retorna o Ã­ndice do menor elemento do vector (assumindo que podemos comparar elementos usando o operador "<")
 int vector_argmin(Vector *v){
     int menorElemento = vector_min(v);
-
     return vector_find(v, menorElemento);
 }
-
-void vector_destroy(Vector *v) {
-    if (v == NULL) return;
-    if (v->data != NULL) {
-        free(v->data);
+void vector_destroy(Vector *v){
+    if (v != NULL){
+        if (v->data != NULL){
+            free(v->data);
+        }
+        free(v);
     }
-    free(v);
 }
+
