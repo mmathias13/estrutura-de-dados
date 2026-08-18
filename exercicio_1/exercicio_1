@@ -1,0 +1,50 @@
+#include <math.h>
+
+void calc_esfera (float r, float *area, float *volume){
+    *area = 4.0 * 3.14 * r * r;
+    *volume = (4.0 * 3.14 * r * r * r) / 3.0;
+}
+
+int raizes (float a, float b, float c, float *x1, float *x2){
+    
+    float delta = b * b - 4 * a * c;
+
+    if (delta < 0){
+        return 0;
+    } else if (delta == 0){
+        *x1 = *x2 = -b / (2 * a);
+        return 1;
+    } else {
+        float raiz_delta = sqrtf(delta);
+        *x1 = (-b + raiz_delta) / (2*a);
+        *x2 = (-b - raiz_delta) / (2*a);
+        return 2;
+    }
+}
+
+int pares (int n, int *vet){
+    int contador = 0;
+    for (int i = 0; i < n; i++){
+        if (vet[i] % 2 == 0){
+            contador++;
+        }
+    }
+    return contador;
+}
+
+void inverte(int n, int*vet){
+    for (int i = 0; i < n / 2; i++){
+        int aux = vet[i];
+        vet[i] = vet[n - 1 - i];
+        vet[n - 1 - i] = aux;
+
+    }
+}
+
+double avalia(double *poli, int grau, double x){
+    double resultado = poli[grau];
+    for (int i =  grau - 1; i >= 0; i--){
+        resultado = resultado * x + poli[i];
+    }
+    return resultado;
+}
